@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Indian Premier League</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">  
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="index.html">IPL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+              </li>
+            
+              
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <a href="addTeam.html"><button class="btn  btn-secondary m-1" type="submit">Add Team</button></a>
+            <button class="btn  btn-primary" type="submit">Add Palyer</button>
+          </div>
+        </div>
+      </nav>
+
+<h1 class="text-center"> Teams </h1>
+
+    <div class="container-fluid">
+       
+        <div class="row">
+
+            <div class="col-3 mt-3">
+                <a href="rcb.html">
+              <div class="card " style="width: 18rem;">
+                  <img src="https://pixlok.com/wp-content/uploads/2021/01/RCB_-logo_with_Satin_Flag.jpg" class="card-img-top" alt="...">
+                  <div class="card-body bg-light">
+                    <h5 class="card-title text-center">RCB</h5>
+               
+                  </div>
+             </div>
+            </a>
+            </div>
+
+            <div class="col-3 mt-3 id="test" ">
+              <a href="mi.html">
+              <div class="card" style="width: 18rem;">
+                    <img src="https://d28wu8o6itv89t.cloudfront.net/images/MumbaiIndianspng-1598599799716.png" height="285px" class="card-img-top" alt="...">
+                    <div class="card-body bg-light">
+                      <h5 class="card-title text-center">MI</h5>
+                 
+                    </div>
+               </div>
+               </a>
+              </div>
+
+              <div class="col-3 mt-3">
+                <a href="dc.html">
+                <div class="card" style="width: 18rem;">
+                    <img src="data:image/jpeg;base64,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">
+                    <div class="card-body bg-light">
+                      <h5 class="card-title text-center">DC</h5>
+                 
+                    </div>
+               </div>
+               </a>
+              </div>
+              <div class="col-3 mt-3">
+                <a href="csk.html">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://i.pinimg.com/originals/85/52/f8/8552f811e95b998d9505c43a9828c6d6.jpg" height="285px">
+                    <div class="card-body bg-light">
+                      <h5 class="card-title text-center">CSK</h5>
+                 
+                    </div>
+               </div>
+               </a>
+              </div>
+              <div class="col-3 mt-3">
+                <a href="rr.html">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://i.pinimg.com/originals/b2/18/30/b2183092ae61c3afc90f339137f76382.jpg" height="285px">
+                    <div class="card-body bg-light">
+                      <h5 class="card-title text-center">RR</h5>
+                 
+                    </div>
+               </div>
+               </a>
+              </div>
+              <div class="col-3 mt-3">
+                <a href="kkr.html">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.whoistheownerof.com/wp-content/uploads/2018/02/Owner-of-Kolkata-Knight-Riders-Team-India-KKR-Wiki-Logo.jpg" height="285px">
+                    <div class="card-body bg-light">
+                      <h5 class="card-title text-center">KKR</h5>
+                 
+                    </div>
+               </div>
+               </a>
+              </div>
+
+
+              <div class="col-3 mt-3">
+                <a href="srh.html">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://static.india.com/wp-content/uploads/2018/01/sun-1.jpg" height="285px">
+                    <div class="card-body bg-light">
+                      <h5 class="card-title text-center">SRH</h5>
+                 
+                    </div>
+               </div>
+               </a>
+              </div>
+              <div class="col-3 mt-3">
+                <a href="kxip.html">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://yespunjab.com/wp-content/uploads/2021/02/Punjab-Kings-Logo.jpg" height="285px">
+                    <div class="card-body bg-light">
+                      <h5 class="card-title text-center">KXIP</p></h5>
+                 
+                    </div>
+               </div>
+               </a>
+              </div>
+
+
+        </div>
+
+
+    </div>
+   
+    <script  type="text/javascript">
+    
+        var x = localStorage.getItem("TeamName");
+        var y=x.split(',');
+        
+       let txt = "";
+        y.forEach(myFunction);
+        document.getElementById("test").innerHTML = txt;
+
+            function myFunction(value, index, array) {
+            txt += value  ; 
+            }
+       
+    </script> 
+</body>
+</html>
+
+
+
+
+
+
